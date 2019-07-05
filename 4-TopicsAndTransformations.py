@@ -11,3 +11,5 @@ for line in dictionary:
 for doc in corpus:
     print(doc)
 print(corpus)
+
+
