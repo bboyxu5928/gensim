@@ -24,3 +24,5 @@ corpus = gensim.matutils.Dense2Corpus(numpy_matrix)
 
 numpy_matrix = gensim.matutils.corpus2dense(corpus, num_terms=number_of_corpus_features)
 print('')
+
+
