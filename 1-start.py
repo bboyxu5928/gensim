@@ -1,5 +1,5 @@
-import logging
-logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s',level=logging.INFO)
+#encoding:utf-8
+#logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s',level=logging.INFO)
 
 from gensim import corpora,models,similarities
 
@@ -12,7 +12,7 @@ corpus = [[(0, 1.0), (1, 1.0), (2, 1.0)],
            [(9, 1.0), (10, 1.0)],
            [(9, 1.0), (10, 1.0), (11, 1.0)],
            [(8, 1.0), (10, 1.0), (11, 1.0)],
-           #放置一个一模一样的
+           #鏀剧疆涓�涓竴妯′竴鏍风殑
            [(0,1),(4,1)]]
 tfidf = models.TfidfModel(corpus)
 vec = [(0,1),(4,1)]

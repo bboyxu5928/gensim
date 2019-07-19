@@ -31,8 +31,8 @@ pprint(texts)
 
 dictionary = corpora.Dictionary(texts)
 #dictionary.save('../gensim/tmp/deerwester.dict') # 把字典保存起来，方便以后使用
-#dictionary.save('./tmp/deerwester.dict') # 把字典保存起来，方便以后使用
-dictionary.save('/deerwester.dict') # 把字典保存起来，方便以后使用
+dictionary.save('./tmp/deerwester.dict') # 把字典保存起来，方便以后使用
+#dictionary.save('/deerwester.dict') # 把字典保存起来，方便以后使用(必须加文件夹。否则会保存到根目录下面)
 
 
 print(dictionary)
@@ -44,7 +44,7 @@ new_vec = dictionary.doc2bow(new_doc.lower().split())
 print(new_vec)
 
 corpus = [dictionary.doc2bow(text) for text in texts]
-corpora.MmCorpus.serialize('/deerwester.mm',corpus)#存入硬盘。
+corpora.MmCorpus.serialize('./tmp/deerwester.mm',corpus)#存入硬盘。
 print(corpus)
 
 class MyCorpus(object):
